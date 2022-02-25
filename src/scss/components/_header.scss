@@ -1,0 +1,55 @@
+.header {
+   background: color(primary, boldblue);
+   background: color(primary, gradientMain);
+
+   .container{
+      @include breakpoint(lg) {
+         display: flex;
+         align-items: center;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
+      }
+   }
+
+   @include e(logo) {
+      margin: 0 auto;
+      width: 150px;
+      &-img {
+         filter: brightness(100);
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   @include e(menu) {
+      width: 100%;
+      &-nav {
+         display: flex;
+         justify-content: center;
+      }
+      &-item {
+         margin: 0 16px;
+      }
+      &-list {
+         list-style: none;
+         display: flex;
+         margin-top: 0;
+         padding: 0;
+         @include breakpoint(lg) {
+            margin: 0;
+            margin-left: auto;
+         }
+      }
+      &-link {
+         color: color(grayscale, white);
+         text-decoration: none;
+      }
+      &-icon {
+         filter: invert(1);
+         position: relative;
+         left: 5px;
+         top: 3px;
+         width: 15px;
+      }
+   }
+}

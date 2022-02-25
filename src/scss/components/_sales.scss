@@ -1,0 +1,126 @@
+.sales {
+   @include e(info) {
+
+      @include breakpoint(lg) {
+         margin-bottom: 1rem;
+      }
+
+      @include breakpoint(lg) {
+         display: flex;
+         align-items: flex-start;
+      }
+
+      &-today {
+         background: color(grayscale, white);
+         border-radius: .5rem;
+         box-shadow: 0 .2rem .1rem 0 rgba(color(grayscale, black), 0.04);
+         overflow: hidden;
+         @include breakpoint(lg) {
+            flex-grow: 1;
+            max-width: 23rem;
+         }
+      }
+      &-head {
+         display: flex;
+         justify-content: space-between;
+         font-size: 1.1rem;
+         font-weight: $font-semi-bold;
+         background: color(primary, gradientSecondary);
+         color: color(grayscale, white);
+         padding: 1.2rem;
+      }
+      &-icon {
+         filter: invert(1);
+         width: 20px;
+      }
+      &-content {
+         padding: 2rem 1.5rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      &-total {
+         font-size: 2.1rem;
+         font-weight: $font-bold;
+         margin-bottom: .5rem;
+         background: color(primary, gradientSecondary);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+      &-date {
+         font-size: 1rem;
+         font-weight: $font-medium;
+         color: color(primary, boldblue);
+      }
+      &-nav {
+         background: color(grayscale, white);
+         border-radius: .15rem;
+         display: flex;
+         justify-content: space-around;
+         list-style: none;
+         padding: .25rem .5rem;
+         width: 100%;
+         @include breakpoint(lg) {
+            margin-top: 0;
+         }
+      }
+      &-item {
+         color: color(primary, boldblue);
+         border-radius: 2.5rem;
+         font-size: .7rem;
+         font-weight: $font-semi-bold;
+         padding: .5rem;
+         text-align: center;
+         cursor: pointer;
+         width: 33%;
+         @include breakpoint(lg) {
+            font-size: 1rem;
+            padding: .6rem;
+         }
+         &.active {
+            background: color(primary, boldbackground);
+         }
+      }
+      &-filters {
+         display: flex;
+         align-items: center;
+         @include breakpoint(lg) {
+            align-items: flex-start;
+            flex-direction: column;
+            flex-grow: 1;
+            margin-left: 2rem;
+         }
+      }
+      &-filter {
+         background: color(grayscale, white);
+         display: flex;
+         align-items: center;
+         padding: 0.25rem 0.5rem;
+         position: relative;
+         margin-left: 0.5rem;
+         height: 2.3rem;
+         cursor: pointer;
+         @include breakpoint(lg) {
+            margin-left: auto;
+            padding: 0 3.5rem;
+            border-radius: .75rem;
+         }
+         img {
+            width: 20px;
+            height: fit-content;
+            @include breakpoint(lg) {
+               margin-left: .5rem;
+            }
+         }
+         &-text {
+            display: none;
+            @include breakpoint(lg) {
+               color: color(primary, boldblue);
+               display: block;
+               font-size: .9rem;
+               font-weight: $font-medium;
+            }
+         }
+      }
+   }
+}

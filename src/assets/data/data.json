@@ -1,0 +1,97 @@
+{
+   "totalToday": "$1'560.000",
+   "totalWeek": "$80'660.060",
+   "totalMonth": "$290'590.900",
+   "transactions": [
+   {
+      "paymentState": "successful",
+      "datePayment": "04/06/2020 - 17:14:24",
+      "brandCard": 1,
+      "typePayment": "link",
+      "paymentMethod": "**** **** **** 7574",
+      "IdTransaction": "GZEN2378FG7US",
+      "amount": "$25.000",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "successful",
+      "datePayment": "04/06/2020 - 17:14:24",
+      "brandCard": 1,
+      "typePayment": "link",
+      "paymentMethod": "**** **** **** 7711",
+      "IdTransaction": "GZEN23785DJD9",
+      "amount": "$25.000",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "unrealized",
+      "datePayment": "04/06/2020 - 18:13:24",
+      "typePayment": "dataphone",
+      "brandCard": 2,
+      "paymentMethod": "**** **** **** 9180",
+      "IdTransaction": "GRGTY3784UBV2",
+      "amount": "$75.850",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "successful",
+      "datePayment": "04/06/2020 - 17:14:24",
+      "brandCard": 1,
+      "typePayment": "link",
+      "paymentMethod": "**** **** **** 7711",
+      "IdTransaction": "GZEN2377UJSD3",
+      "amount": "$89.895",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "unrealized",
+      "datePayment": "04/06/2020 - 16:16:22",
+      "typePayment": "dataphone",
+      "brandCard": 2,
+      "paymentMethod": "**** **** **** 9941",
+      "IdTransaction": "GZEN78814UBV2",
+      "amount": "$525.000",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "unrealized",
+      "datePayment": "04/06/2020 - 16:16:22",
+      "typePayment": "dataphone",
+      "brandCard": 2,
+      "paymentMethod": "**** **** **** 9941",
+      "IdTransaction": "GZEN78814UBV2",
+      "amount": "$152.000",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "successful",
+      "datePayment": "03/06/2020 - 24:10:22",
+      "typePayment": "link",
+      "brandCard": 1,
+      "paymentMethod": "**** **** **** 6263",
+      "IdTransaction": "EZEN78814U698",
+      "amount": "$102.100",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "unrealized",
+      "datePayment": "04/06/2020 - 16:16:22",
+      "typePayment": "dataphone",
+      "brandCard": 2,
+      "paymentMethod": "**** **** **** 9941",
+      "IdTransaction": "GZEN78814UBV2",
+      "amount": "$77.000",
+      "deduction": "$15.000"
+   },
+   {
+      "paymentState": "successful",
+      "datePayment": "03/06/2020 - 02:10:22",
+      "typePayment": "link",
+      "brandCard": 1,
+      "paymentMethod": "**** **** **** 6263",
+      "IdTransaction": "EZEN78814U698",
+      "amount": "$103.000",
+      "deduction": "$15.000"
+   }
+   ]
+}

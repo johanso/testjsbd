@@ -1,0 +1,36 @@
+// ==========================================================================
+// Mixins BEM selectors (Block, Element, Modifier)
+// ==========================================================================
+// Ej.: @include e(title) {}
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+// Ej.: @include m(primary) {}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// ==========================================================================
+// Mixins media querie : Ejm @include breakpoint(md)
+// ==========================================================================
+@mixin breakpoint($breakpoint) {
+  @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+    @content;
+  }
+}
+
+// ==========================================================================
+// Mixins para la generación de los spaciados ( margins y paddings )
+// ==========================================================================
+@mixin list-spacing($className, $styleName) {
+  @each $name, $space in $sizes {
+    #{$className}-#{$name} {
+      #{$styleName}: $space;
+    }
+  }
+}

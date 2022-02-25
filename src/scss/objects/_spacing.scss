@@ -1,0 +1,37 @@
+@include list-spacing(".p", "padding");
+@include list-spacing(".pt", "padding-top");
+@include list-spacing(".pb", "padding-bottom");
+@include list-spacing(".pr", "padding-right");
+@include list-spacing(".pl", "padding-left");
+
+@include list-spacing(".m", "margin");
+@include list-spacing(".mt", "margin-top");
+@include list-spacing(".mb", "margin-bottom");
+@include list-spacing(".mr", "margin-right");
+@include list-spacing(".ml", "margin-left");
+
+@each $name, $value in $breakpoints {
+  @include breakpoint(#{$name}) {
+    @each $sizeName, $sizevalue in $sizes {
+      .m-#{$sizeName}\@#{$name} {
+        margin: $sizevalue;
+      }
+
+      .mt-#{$sizeName}\@#{$name} {
+        margin-top: $sizevalue;
+      }
+
+      .ml-#{$sizeName}\@#{$name} {
+        margin-left: $sizevalue;
+      }
+
+      .mr-#{$sizeName}\@#{$name} {
+        margin-right: $sizevalue;
+      }
+
+      .mb-#{$sizeName}\@#{$name} {
+        margin-bottom: $sizevalue;
+      }
+    }
+  }
+}

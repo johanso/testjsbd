@@ -1,0 +1,27 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+   outline: 0 solid;
+   &:hover,
+   &:active,
+   &:focus,
+   &:visited {
+      outline: 0px solid;
+   }
+}
+
+html,
+body,
+html {
+   height: 100%;
+   font-size: map-get($font-size-map, base);
+}
+
+body {
+   background: color(primary, boldbackground);
+   font-family: $font-primary;
+   font-weight: $font-regular;
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,21 @@
+.container {
+   max-width: map-get($breakpoints, xl);
+   padding: {
+      left: map-get($sizes, base);
+      right: map-get($sizes, base);
+   }
+   margin: {
+      left: auto;
+      right: auto;
+   }
+
+   &.main {
+      margin-top: 2rem;
+   }
+
+   @each $name, $value in $containers {
+      &-#{$name} {
+         max-width: $value;
+      }
+   }
+}

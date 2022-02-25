@@ -1,0 +1,84 @@
+.dropdown-filter {
+   background: color(grayscale, white);
+   padding: 1rem;
+   border-radius: 1rem;
+   box-shadow: 0 .2rem .1rem 0 rgba(color(grayscale, black), 0.04);
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 22rem;
+   z-index: 2;
+
+   &.hidden {
+      display: none;
+   }
+
+   @include e(head) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: $font-medium;
+      margin-bottom: 1.5rem;
+      color: color(primary, boldblue);
+      &-close {
+         margin-left: 0;
+         margin-right: 0;
+         position: absolute;
+         right: 1rem;
+         width: 0.9rem !important;
+         top: 1rem;
+      }
+   }
+   
+   @include e(label) {
+      font-size: 1.2rem;
+      font-weight: $font-semi-bold;
+      color: color(primary, boldblue);
+      cursor: pointer;
+      display: block;
+      position: relative;
+      padding-left: 2.5rem;
+      margin-bottom: 1rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input:checked ~ .checkmark {
+         background: color(primary, boldblue);
+      }
+      input:checked ~ .checkmark::after {
+         display: block;
+      }
+
+      input {
+         
+         position: absolute;
+         opacity: 0;
+         height: 0;
+         width: 0;
+      }
+
+      .checkmark {
+         background: color(grayscale, white);
+         border: 1px solid color(grayscale, -3);
+         border-radius: .2rem;
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 1.5rem;
+         width: 1.5rem;
+         &::after {
+            content: '';
+            position: absolute;
+            display: none;
+         }
+      }
+      
+   }
+
+   button[class*="btn"] {
+      margin: 2rem auto .75rem;
+      display: block;
+   }
+}

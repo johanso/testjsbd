@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Bold test App</title>
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <div class="header__logo">
+               <img class="header__logo-img" src="./assets/images/logo-bold.png" alt="logo" />
+            </div>
+            <div class="header__menu">
+               <nav class="header__menu-nav">
+                  <ul class="header__menu-list">
+                     <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">Mi negocio</a>
+                     </li>
+                     <li class="header__menu-item">
+                        <a class="header__menu-link" href="#">
+                           Ayuda
+                           <img class="header__menu-icon" src="./assets/images/info.png" alt="icon ayuda" />
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <div class="container main">
+
+            <div class="sales">
+               <section class="sales__info">
+
+                  <div class="sales__info-today" id="card-sales">
+                     <div class="sales__info-head">
+                        <span>Total de ventas de hoy</span>
+                        <img class="sales__info-icon" src="./assets/images/info.png" alt="icon ayuda" />
+                     </div>
+                     <div class="sales__info-content">
+                        <span class="sales__info-total">$1'560.000</span>
+                        <span class="sales__info-date">Septiembre 2020</span>
+                     </div>
+                  </div>
+
+                  <nav class="sales__info-filters">
+                     <ul class="sales__info-nav" id="filterTotalSales">
+                        <li class="sales__info-item active" data-sales="today">Hoy</li>
+                        <li class="sales__info-item" data-sales="week">Esta semana</li>
+                        <li class="sales__info-item" data-sales="month">Septiembre</li>
+                     </ul>
+                     <div class="sales__info-filter" id="btn-filter">
+                        <span class="sales__info-filter-text">FILTRAR</span>
+                        <img src="./assets/images/filtrar.png" alt="icon filtrar" />
+
+                        <div class="dropdown-filter hidden" id="dropdown-filter">
+                           <div class="dropdown-filter__head">
+                              <span>FILTRAR</span>
+                              <img class="dropdown-filter__head-close close" src="./assets/images/close.png" />
+                           </div>
+                           <div class="dropdown-filter__content">
+                              <form class="dropdown-filter__form" id="filter-form">
+                                 <label class="dropdown-filter__label"> Cobro con datáfono
+                                    <input class="input" name="filterType" value="dataphone" type="radio" />
+                                    <span class="checkmark"></span>
+                                 </label>
+                                 <label class="dropdown-filter__label"> Cobro con link de pago
+                                 <input class="input" name="filterType" value="link" type="radio" />
+                                    <span class="checkmark"></span>
+                                 </label>
+                                 <label class="dropdown-filter__label">Ver todos
+                                 <input class="input" name="filterType" value="all" type="radio" />
+                                    <span class="checkmark"></span>
+                                 </label>
+                                 <button class="btn btn--secondary btn--rounded btn--big" type="submit">
+                                    Aplicar
+                                 </button>
+                              </form>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </nav>
+
+               </section>
+            </div>
+
+            <div class="table">
+               <section class="table__month">
+
+                  <div class="table__data-header">
+                     <div class="table__data-text">Tus ventas de septiembre</div>
+                  </div>
+
+                  <table class="table__data" id="data-table">
+                     <thead>
+                        <tr class="table__data-subheader">
+                        <th>Transacción</th>
+                        <th>Fecha y hora</th>
+                        <th>Método de pago</th>
+                        <th>ID transacción Bold</th>
+                        <th>Monto</th>
+                        </tr>
+                     </thead>
+                     <tbody class="table__data-body"></tbody>
+                  </table>
+
+               </section>
+            </div>
+            
+         </div>
+      </main>
+   </body>
+</html>

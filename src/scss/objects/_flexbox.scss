@@ -1,0 +1,77 @@
+$dflexs: flex, inline-flex;
+$directions: row, row-reverse, column, column-reverse;
+$flexwrap: wrap, nowrap, wrap-reverse;
+$justifycontent: center, flex-start, flex-end, space-around, space-between,
+  space-evenly;
+$alignitems: stretch, flex-start, flex-end, center, baseline;
+
+// display flex
+@each $dflex in $dflexs {
+  .d-#{$dflex} {
+    display: $dflex;
+  }
+}
+
+@each $fdirection in $directions {
+  .fd-#{$fdirection} {
+    flex-direction: $fdirection;
+  }
+}
+
+@each $fwrap in $flexwrap {
+  .fw-#{$fwrap} {
+    flex-wrap: $fwrap;
+  }
+}
+
+@each $fwrap in $justifycontent {
+  .jc-#{$fwrap} {
+    justify-content: $fwrap;
+  }
+}
+
+@each $aitems in $alignitems {
+  .ai-#{$aitems} {
+    align-items: $aitems;
+  }
+}
+
+@each $name, $size in $breakpoints {
+  @include breakpoint(#{$name}) {
+    @each $fdirection in $directions {
+      .fd-#{$fdirection}\@#{$name} {
+        flex-direction: $fdirection;
+      }
+    }
+  }
+}
+
+@each $name, $size in $breakpoints {
+  @include breakpoint(#{$name}) {
+    @each $fwrap in $flexwrap {
+      .fw-#{$fwrap}\@#{$name} {
+        flex-wrap: $fwrap;
+      }
+    }
+  }
+}
+
+@each $name, $size in $breakpoints {
+  @include breakpoint(#{$name}) {
+    @each $fwrap in $justifycontent {
+      .jc-#{$fwrap}\@#{$name} {
+        justify-content: $fwrap;
+      }
+    }
+  }
+}
+
+@each $name, $size in $breakpoints {
+  @include breakpoint(#{$name}) {
+    @each $aitems in $alignitems {
+      .ai-#{$aitems}\@#{$name} {
+        align-items: $aitems;
+      }
+    }
+  }
+}

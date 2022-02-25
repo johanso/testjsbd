@@ -1,0 +1,33 @@
+.btn {
+   border: none;
+   padding: 1rem 1.5rem;
+   cursor: pointer;
+   outline: none;
+   transition: all .1s linear;
+
+   &--primary {
+      background: color(primary, boldblue);
+      color: color(grayscale, white);
+      &:hover {
+         background: darken(color(primary, boldblue), 05);
+      }
+   }
+
+   &--secondary {
+      background: color(primary, boldpink);
+      color: color(grayscale, white);
+      &:hover {
+         background: darken(color(primary, boldpink), 05);
+      }
+   }
+
+   &--rounded {
+      border-radius: 2.5rem;
+   }
+
+   &--big {
+      font-size: 1.2rem;
+      font-weight: $font-semi-bold;
+      padding: 1rem 4.5rem;
+   }
+}

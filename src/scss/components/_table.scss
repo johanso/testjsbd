@@ -1,0 +1,86 @@
+.table {
+   overflow-x: auto;
+   padding-bottom: 1rem;
+
+   @include e(month) {
+      min-width: map-get($breakpoints, lg);
+   }
+
+   @include e(data) {
+      background: color(grayscale, white);
+      border-collapse: collapse;
+      border-radius: 0 0 1rem 1rem;
+      overflow: hidden;
+      height: 200px;
+      width: 100%;
+
+      &-header {
+         position: relative;
+         div {
+            background: color(primary, gradientMain) !important;
+            border-radius: 1rem 1rem 0 0;
+            color: color(grayscale, white);
+            font-size: 1.1rem;
+            font-weight: $font-medium;
+            text-align: left;
+            padding: 1rem;
+         }
+      }
+
+      &-subheader {
+         font-size: .9rem;
+         font-weight: $font-regular;
+         th {
+            font-weight: $font-medium;
+            padding: 1rem;
+            text-align: left;
+            white-space: nowrap;
+            border-bottom: 1px solid color(primary, boldbackground); 
+         }
+      }
+
+      &-body {
+         tr {
+            &.successful {
+               border-left: 0.75rem solid color(primary, boldblue);
+            }
+            &.unrealized {
+               border-left: 0.75rem solid color(primary, boldgrayLight);
+            }
+            .state-transation {
+               color: color(primary, boldblue);
+               font-weight: $font-medium;
+               display: flex;
+               align-items: center;
+            }
+            .value-total {
+               color: color(primary, boldblue);
+               font-weight: $font-medium;
+            }
+            .deduction {
+               color: color(primary, boldgrayLight);
+               font-weight: $font-medium;
+               font-size: .8rem;
+               margin: .4rem 0;
+            }
+            .value-deduction {
+               color: color(primary, boldred);
+               font-weight: $font-medium;
+               font-size: .8rem;
+            }
+         }
+         td {
+            border-bottom: 1px solid color(primary, boldbackground); 
+            padding: 1rem;
+            white-space: nowrap;
+            font-size: .9rem;
+            color: color(grayscale, -4);
+            img {
+               width: 1.5rem;
+               margin-right: .65rem;
+            }
+         }
+      }
+   }
+    
+}
